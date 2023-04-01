@@ -1,0 +1,63 @@
+﻿@page
+@model NorthWindApp.Pages.Shared.CustomersModel
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id
+                <a asp-page="/Customers"
+                asp-route-sortColumn="Id"
+                asp-route-sortOrder="asc"
+                style="text-decoration:none">
+                   <i class="fa-solid fa-arrow-up" style="color:black"></i>
+            </a>
+                <a asp-page="/Customers"
+                asp-route-sortColumn="Id"
+                asp-route-sortOrder="desc"
+                style="text-decoration:none">
+                <i class="fa-solid fa-arrow-down" style="color:black"></i>
+            </a>
+            </th>
+            <th scope="col">Name
+                <a asp-page="/Customers"
+                asp-route-sortColumn="Name"
+                asp-route-sortOrder="asc"
+                style="text-decoration:none">
+                   <i class="fa-solid fa-arrow-up" style="color:black"></i>
+            </a>
+                <a asp-page="/Customers"
+                asp-route-sortColumn="Name"
+                asp-route-sortOrder="desc"
+                style="text-decoration:none">
+                <i class="fa-solid fa-arrow-down" style="color:black"></i>
+            </a>
+            </th>
+            <th scope="col">Address
+                <a asp-page="/Customers"
+                asp-route-sortColumn="Address"
+                asp-route-sortOrder="asc"
+                style="text-decoration:none">
+                   <i class="fa-solid fa-arrow-up" style="color:black"></i>
+            </a>
+                <a asp-page="/Customers"
+                asp-route-sortColumn="Address"
+                asp-route-sortOrder="desc"
+                style="text-decoration:none">
+                <i class="fa-solid fa-arrow-down" style="color:black"></i>
+            </a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@{
+    foreach(var customer in Model.Customers)
+    {
+        <tr>
+        <td>@customer.Id</td>
+        <td>@customer.Name</td>
+        <td>@customer.Address</td>
+        </tr>
+    }
+}
+</tbody>
+</table>
