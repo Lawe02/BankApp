@@ -8,11 +8,9 @@ namespace NorthWindApp.Pages
 {
     public class AccountsModel : PageModel
     {
-        private readonly BankAppDataContext _context;
         private readonly AccountServices _accServices;
-        public AccountsModel(BankAppDataContext context, AccountServices accServices)
+        public AccountsModel(AccountServices accServices)
         {
-            _context = context;
             _accServices = accServices;
         }
         public List<dynamic> Accounts { get; set; }
