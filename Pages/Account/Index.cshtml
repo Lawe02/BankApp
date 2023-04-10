@@ -1,0 +1,39 @@
+﻿@page
+@model NorthWindApp.Pages.Accounts.IndexModel
+@{
+    <div class="card">
+    <div class="card-header">
+        <h1>Account Info</h1>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <tr>
+                <th>Account number</th>
+                <th>Balance</th>
+                <th></th>
+                <th></th>
+            </tr>
+                <tr>
+                    <td>@Model.Id</td>
+                    <td>@Model.Balance</td>
+                </tr>
+            <tr>
+            <td><i class="fa-solid fa-money-bill-transfer"></i></td>
+           <td>
+                <form action="Account/Withdrawal" method="get">
+                  <input type="hidden" name="id" value="@Model.Id" />
+                  <button type="submit"><i class="fa-solid fa-square-minus"></i></button>
+                </form>
+
+                <a asp-page="/Accounts/Deposit" asp-route-id="@Model.Id">></a>
+                <form action="Account/Deposit" method="get">
+                    <input type="hidden" name="id" value="@Model.Id" />
+                    <button type="submit"><i class="fa-solid fa-square-plus"></i></button>
+                </form>
+           </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+}

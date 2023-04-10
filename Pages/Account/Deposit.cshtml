@@ -1,0 +1,21 @@
+﻿@page
+@model NorthWindApp.Pages.Account.DepositModel
+@{
+    ViewData["Title"] = "Deposit";
+}
+
+<div class="container">
+    <h1>@ViewData["Title"]</h1>
+    <h4>Account Id: @Model.Id</h4>
+    <h4>Balance: @Model.Balance</h4>
+
+    <form  method="post">
+        <div class="form-group">
+            <label for="amount">Amount:</label>
+            <input type="number" class="form-controll" id="amount" name="amount" min="o" step="1" required/>
+        </div>
+        <input type="hidden" name="id" value="@Model.Id" />
+
+        <button type="submit" class="btn btn-primary" asp-controller="Account" asp-action="Deposit">Deposit</button>
+    </form>
+</div>

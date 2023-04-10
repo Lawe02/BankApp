@@ -1,0 +1,23 @@
+﻿@page
+@model NorthWindApp.Pages.Account.WithdrawalModel
+@{
+    ViewData["Title"] = "Withdrawal";
+}
+
+<div class="container">
+    <h1>@ViewData["Title"]</h1>
+    <h4>Account Id: @Model.Id</h4>
+    <h4>Balance: @Model.Balance</h4>
+
+<form method="post">
+    <div class="form-group">
+        <label for="amount">Amount:</label>
+        <input type="number" class="form-control" id="amount" name="amount" min="0" step="0.01" required>
+    </div>
+    <input type="hidden" name="id" value="@Model.Id" />
+
+    @* Using ASP.NET attribute syntax *@
+    <button type="submit" class="btn btn-primary" asp-controller="Account" asp-action="Withdraw">Withdraw</button>
+</form>
+
+</div>

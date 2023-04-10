@@ -56,8 +56,44 @@
         <td>@customer.Id</td>
         <td>@customer.Name</td>
         <td>@customer.Address</td>
+        <td>
+        <a 
+            asp-page="/Customer/Index"
+            asp-route-id="@customer.Id"
+            >
+            i
+        </a>
+        </td>
         </tr>
     }
 }
 </tbody>
+ <form method="get">
+    <input asp-for="@Model.Q" class="page-input"/>
+    <input type="submit" value="Search" class="pagebtn" style="position:relative;"/>
+</form>
+<tr>
+    <a
+    class="pagebtn"
+    asp-page="/Customers"
+    asp-route-pageNr=@(Model.PageNr-1)
+    asp-route-sortColumn=@(Model.SortColumn)
+    asp-route-sortOrder=@(Model.SortOrder)
+    asp-route-q=@(Model.Q)
+    style="float:left;"
+    >
+    Prev
+</a>
+<a
+    class="pagebtn"
+    asp-page="/Customers"
+    asp-route-pageNr=@(Model.PageNr+1)
+    asp-route-sortColumn=@(Model.SortColumn)
+    asp-route-sortOrder=@(Model.SortOrder)
+    asp-route-q=@(Model.Q) 
+    style="float:right;"
+    >
+    Next
+</a>
+</tr>
 </table>

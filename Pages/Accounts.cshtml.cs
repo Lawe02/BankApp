@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using NorthWindApp.Models;
@@ -6,6 +7,7 @@ using NorthWindApp.Services;
 
 namespace NorthWindApp.Pages
 {
+    [Authorize(Roles = "Admin")]
     public class AccountsModel : PageModel
     {
         private readonly AccountServices _accServices;
@@ -13,10 +15,28 @@ namespace NorthWindApp.Pages
         {
             _accServices = accServices;
         }
-        public List<dynamic> Accounts { get; set; }
-        public void OnGet(string sortColumn, string sortOrder)
+        public int PageNr { get; set; } = 1;
+        public List<dynamic> Accounts { get; set; } 
+        public string Q { get; set; }
+        public string SortColumn { get; set; }
+        public string SortOrder { get; set; }
+        public void OnGet(string sortColumn, string sortOrder, int pageNr, string q)
         {
-            Accounts = _accServices.GetAccounts(sortColumn, sortOrder);
+            if (pageNr != 0)
+                PageNr = pageNr;
+            else
+                PageNr = 1;
+
+            if (sortColumn != null)
+                SortColumn = sortColumn;
+
+            if (sortOrder != null)
+                SortOrder = sortOrder;
+
+            if (q != null)
+                Q = q;
+
+            Accounts = _accServices.GetAccounts(SortColumn, SortOrder, PageNr, Q);
         }
     }
 }

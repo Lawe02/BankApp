@@ -11,7 +11,8 @@ namespace NorthWindApp.Services
         {
             _context = context;
         }
-        public List<dynamic> GetAccounts(string sortColumn, string sortOrder)
+
+        public List<dynamic> GetAccounts(string sortColumn, string sortOrder, int pageNr, string q)
         {
             var query = _context.Accounts
                 .Select(x => new 
@@ -24,7 +25,7 @@ namespace NorthWindApp.Services
 
             if (sortColumn == "Id")
                 if (sortOrder == "asc")
-                    query = query.OrderBy(x => x.Id);
+                    query = query.OrderBy(x => x.GetType().ToString() == sortColumn);
                 else
                     query = query.OrderByDescending(x => x.Id);
 
@@ -46,8 +47,57 @@ namespace NorthWindApp.Services
                 else
                     query = query.OrderByDescending(x => x.Frequency);
 
+            if (q != null)
+                query = query.Where(x => x.Id.ToString().Contains(q) ||
+                                         x.Created.ToString().Contains(q) ||
+                                         x.Balance.ToString().Contains(q) ||
+                                         x.Frequency.Contains(q));
+
+            query = query
+                .Skip((pageNr -1) * 50)
+                .Take(50);
+
             return query.ToList<dynamic>();
 
+        }
+
+        public Account GetAccount(int id)
+        {
+            var acc = _context.Accounts.FirstOrDefault(x => x.AccountId == id);
+            return acc;
+        }
+
+        public void MakeWithdrawal(decimal amount, Account acc)
+        {
+            acc.Balance -= amount;
+
+            _context.Transactions.Add(new Transaction()
+            {
+                Amount = -1 * amount,
+                AccountId = acc.AccountId,
+                Date = DateTime.Now,
+                Type = "Credit",
+                Operation = "Credit in Cash",
+                Balance = acc.Balance
+            });
+
+            _context.SaveChanges();
+        }
+
+        public void MakeDeposit(decimal amount, Account acc)
+        {
+            acc.Balance += amount;
+
+            _context.Transactions.Add(new Transaction()
+            {
+                Amount = amount,
+                AccountId = acc.AccountId,
+                Date = DateTime.Now,
+                Type = "Credit",
+                Operation = "Credit in Cash",
+                Balance = acc.Balance
+            });
+            _context.SaveChanges();   
         }
     }
 }

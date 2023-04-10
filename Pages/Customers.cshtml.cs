@@ -1,48 +1,43 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using NorthWindApp.Models;
 using NorthWindApp.Pages.ViewModels;
+using NorthWindApp.Services;
 
 namespace NorthWindApp.Pages.Shared
 {
+    [Authorize(Roles = "Admin")]
     public class CustomersModel : PageModel
     {
-        private readonly BankAppDataContext _dbContext;
+        private readonly CustomerServices _cusService;
 
-        public CustomersModel(BankAppDataContext context)
+        public CustomersModel(CustomerServices service)
         {
-            _dbContext = context;
+            _cusService = service;
         }
+        public int PageNr { get; set; } = 1;
         public List<CustomerViewModel> Customers { get; set; }
-        public void OnGet(string sortColumn, string sortOrder)
+        public string Q { get; set; }
+        public string SortOrder { get; set; }
+        public string SortColumn { get; set; }
+        public void OnGet(string sortColumn, string sortOrder, string q, int pageNr)
         {
-            var query = _dbContext.Customers
-                .Select(x=> new CustomerViewModel() 
-                { 
-                    Address = x.Streetaddress,
-                    Id = x.CustomerId,
-                    Name = x.Givenname
-                });
+            if (pageNr != 0)
+                PageNr = pageNr;
+            else
+                PageNr = 1;
 
-            if (sortColumn == "Address")
-                if (sortOrder == "asc")
-                    query = query.OrderBy(x => x.Address);
-                else
-                    query = query.OrderByDescending(x => x.Address);
+            if (q != null)
+                Q = q;
 
-            if (sortColumn == "Id")
-                if (sortOrder == "asc")
-                    query = query.OrderBy(x => x.Id);
-                else
-                    query = query.OrderByDescending(x => x.Id);
+            if (sortColumn != null)
+                SortColumn = sortColumn;
 
-            if (sortColumn == "Name")
-                if (sortOrder == "asc")
-                    query = query.OrderBy(x => x.Name);
-                else
-                    query = query.OrderByDescending(x => x.Name);
+            if(sortOrder != null)
+                SortOrder = sortOrder;
 
-            Customers = query.ToList();
+            Customers = _cusService.GetCustomers(SortColumn, SortOrder, Q, PageNr);
 
         }
     }

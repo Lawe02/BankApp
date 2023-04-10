@@ -2,7 +2,8 @@
 @model NorthWindApp.Pages.AccountsModel
 <link rel="stylesheet" href="~/lib/fontawesome-free/css/all.min.css" />
 
-<table class="table table-striped">
+<div style="margin-bottom:50px">
+        <table class="table table-striped">
       <thead>
         <tr>
             <th scope="col">Id
@@ -73,8 +74,44 @@
             <th>@account.Frequency</th>
             <th>@account.Created</th>
             <th>@account.Balance</th>
+            <th><a 
+                asp-page="/Account/Index"
+                asp-route-id="@account.Id"
+            >
+            i
+            </a></th>
         </tr>
     }
 }
+
 </tbody>
+    <form method="get">
+    <input asp-for="@Model.Q" class="page-input"/>
+    <input type="submit" value="Search" class="pagebtn" style="position:relative;"/>
+</form>
 </table>
+<tr>
+    <a
+    class="pagebtn"
+    asp-page="/Accounts"
+    asp-route-pageNr=@(Model.PageNr-1)
+    asp-route-sortColumn=@(Model.SortColumn)
+    asp-route-sortOrder=@(Model.SortOrder)
+    asp-route-q=@(Model.Q)
+    style="float:left;"
+    >
+    Prev
+</a>
+<a
+    class="pagebtn"
+    asp-page="/Accounts"
+    asp-route-pageNr=@(Model.PageNr+1)
+    asp-route-sortColumn=@(Model.SortColumn)
+    asp-route-sortOrder=@(Model.SortOrder)
+    asp-route-q=@(Model.Q) 
+    style="float:right;"
+    >
+    Next
+</a>
+</tr>
+</div>
