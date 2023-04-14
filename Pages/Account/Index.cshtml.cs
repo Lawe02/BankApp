@@ -8,8 +8,8 @@ namespace NorthWindApp.Pages.Accounts
 {
     public class IndexModel : PageModel
     {
-        private readonly AccountServices _service;
-        public IndexModel (AccountServices service)
+        private readonly IAccountService _service;
+        public IndexModel(IAccountService service)
         {
             _service = service;
         }

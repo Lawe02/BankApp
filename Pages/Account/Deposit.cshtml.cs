@@ -10,8 +10,8 @@ namespace NorthWindApp.Pages.Account
     public class DepositModel : PageModel
     {
 
-        private readonly AccountServices _service;
-        public DepositModel(AccountServices service)
+        private readonly IAccountService _service;
+        public DepositModel(IAccountService service)
         {
             _service = service;
         }

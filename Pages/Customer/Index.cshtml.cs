@@ -6,9 +6,9 @@ namespace NorthWindApp.Pages.Customer
 {
     public class IndexModel : PageModel
     {
-        private readonly CustomerServices _cusService;
+        private readonly ICustomerService _cusService;
 
-        public IndexModel(CustomerServices service)
+        public IndexModel(ICustomerService service)
         {
             _cusService = service;
         }

@@ -10,9 +10,9 @@ namespace NorthWindApp.Pages.Shared
     [Authorize(Roles = "Admin")]
     public class CustomersModel : PageModel
     {
-        private readonly CustomerServices _cusService;
+        private readonly ICustomerService _cusService;
 
-        public CustomersModel(CustomerServices service)
+        public CustomersModel(ICustomerService service)
         {
             _cusService = service;
         }

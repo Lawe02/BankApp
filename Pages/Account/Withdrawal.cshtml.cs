@@ -6,9 +6,9 @@ namespace NorthWindApp.Pages.Account
 {
     public class WithdrawalModel : PageModel
     {
-        private readonly AccountServices _service;
+        private readonly IAccountService _service;
 
-        public WithdrawalModel(AccountServices service)
+        public WithdrawalModel(IAccountService service)
         {
             _service = service;
         }

@@ -10,10 +10,10 @@ namespace NorthWindApp.Pages
     [Authorize(Roles = "Admin")]
     public class AccountsModel : PageModel
     {
-        private readonly AccountServices _accServices;
-        public AccountsModel(AccountServices accServices)
+        private readonly IAccountService _service;
+        public AccountsModel(IAccountService accService)
         {
-            _accServices = accServices;
+            _service = accService;
         }
         public int PageNr { get; set; } = 1;
         public List<AccountViewModel> Accounts { get; set; } 
@@ -36,7 +36,7 @@ namespace NorthWindApp.Pages
             if (q != null)
                 Q = q;
 
-            Accounts = _accServices.GetAccounts(SortColumn, SortOrder, PageNr, Q);
+            Accounts = _service.GetAccounts(SortColumn, SortOrder, PageNr, Q);
         }
     }
 }
