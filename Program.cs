@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using NorthWindApp.Data;
-using NorthWindApp.Models;
-using NorthWindApp.Services;
+using SuperLibrary.Data;
+using SuperLibrary.Models;
+using SuperLibrary.Services;
 using RazorIdentityNewProject.Data;
 
 var builder = WebApplication.CreateBuilder(args);

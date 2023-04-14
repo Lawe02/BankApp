@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using NorthWindApp.Services;
+using SuperLibrary.Services;
 
 namespace NorthWindApp.Pages.Account
 {

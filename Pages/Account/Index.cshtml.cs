@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using NorthWindApp.Services;
-using NorthWindApp.Models;
-using NorthWindApp.Pages.ViewModels;
+using SuperLibrary.Services;
+using SuperLibrary.Models;
+using SuperLibrary.ViewModels;
 
 namespace NorthWindApp.Pages.Accounts
 {

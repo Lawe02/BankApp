@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using NorthWindApp.Models;
-using NorthWindApp.Pages.ViewModels;
-using NorthWindApp.Services;
+using SuperLibrary.Models;
+using SuperLibrary.ViewModels;
+using SuperLibrary.Services;
 
 namespace NorthWindApp.Pages.Shared
 {

@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using NorthWindApp.Models;
-using NorthWindApp.Pages.ViewModels;
-using NorthWindApp.Services;
+using SuperLibrary.Models;
+using SuperLibrary.ViewModels;
+using SuperLibrary.Services;
 
 namespace NorthWindApp.Pages
 {
@@ -16,7 +16,7 @@ namespace NorthWindApp.Pages
             _accServices = accServices;
         }
         public int PageNr { get; set; } = 1;
-        public List<dynamic> Accounts { get; set; } 
+        public List<AccountViewModel> Accounts { get; set; } 
         public string Q { get; set; }
         public string SortColumn { get; set; }
         public string SortOrder { get; set; }
