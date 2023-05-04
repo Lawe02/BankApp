@@ -22,9 +22,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddRazorPages();
 
 builder.Services.AddTransient<DataInitializer>();
-// builder.Services.AddTransient<AccountServices>();
 builder.Services.AddTransient<IAccountService, AccountServices>();
-// builder.Services.AddTransient<CustomerServices>();
 builder.Services.AddTransient<ICustomerService, CustomerServices>();
 
 var app = builder.Build();

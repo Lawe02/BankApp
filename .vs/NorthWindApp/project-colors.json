@@ -10,7 +10,12 @@
       "ProjectGuid": "3e6ec1d7-02f8-47c2-aa6d-68e11bb7569e",
       "DisplayName": "NorthWindApp",
       "ColorIndex": 0
+    },
+    "c98e968b-c11a-408d-a5c5-17bce530a8c1": {
+      "ProjectGuid": "c98e968b-c11a-408d-a5c5-17bce530a8c1",
+      "DisplayName": "SuperLibrary",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

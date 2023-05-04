@@ -278,3 +278,4 @@ C:\Users\Lawe Zangena\csharp\NorthWindApp\bin\Debug\net6.0\Swashbuckle.AspNetCor
 C:\Users\Lawe Zangena\csharp\NorthWindApp\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Lawe Zangena\csharp\NorthWindApp\bin\Debug\net6.0\SuperLibrary.dll
 C:\Users\Lawe Zangena\csharp\NorthWindApp\bin\Debug\net6.0\SuperLibrary.pdb
+C:\Users\Lawe Zangena\csharp\northwindapp\obj\Debug\net6.0\NorthWindApp.MvcApplicationPartsAssemblyInfo.cs
