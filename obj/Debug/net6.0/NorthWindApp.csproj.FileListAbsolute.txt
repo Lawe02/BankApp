@@ -565,3 +565,5 @@ C:\Users\lawza\Source\Repos\BankApp1\obj\Debug\net6.0\refint\NorthWindApp.dll
 C:\Users\lawza\Source\Repos\BankApp1\obj\Debug\net6.0\NorthWindApp.genruntimeconfig.cache
 C:\Users\lawza\Source\Repos\BankApp1\obj\Debug\net6.0\ref\NorthWindApp.dll
 C:\Users\lawza\source\repos\BankApp1\obj\Debug\net6.0\NorthWindApp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\lawza\source\repos\BankApp1\bin\Debug\net6.0\SuperLibrary\obj\project.assets.json
+C:\Users\lawza\source\repos\BankApp1\bin\Debug\net6.0\SuperLibrary\obj\SuperLibrary.csproj.nuget.dgspec.json
