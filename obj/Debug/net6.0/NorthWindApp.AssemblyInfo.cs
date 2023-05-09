@@ -11,7 +11,6 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-NorthWindApp-936AEA52-B1F2-456E-98E8-0560C9F88264")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("NorthWindApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
