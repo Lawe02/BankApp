@@ -1,27 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lawe Zangena\\csharp\\NorthWindApp\\NorthWindApp.csproj": {}
+    "C:\\Users\\lawza\\source\\repos\\BankApp1\\NorthWindApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lawe Zangena\\csharp\\NorthWindApp\\NorthWindApp.csproj": {
+    "C:\\Users\\lawza\\source\\repos\\BankApp1\\NorthWindApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lawe Zangena\\csharp\\NorthWindApp\\NorthWindApp.csproj",
+        "projectUniqueName": "C:\\Users\\lawza\\source\\repos\\BankApp1\\NorthWindApp.csproj",
         "projectName": "NorthWindApp",
-        "projectPath": "C:\\Users\\Lawe Zangena\\csharp\\NorthWindApp\\NorthWindApp.csproj",
-        "packagesPath": "C:\\Users\\Lawe Zangena\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lawe Zangena\\csharp\\NorthWindApp\\obj\\",
+        "projectPath": "C:\\Users\\lawza\\source\\repos\\BankApp1\\NorthWindApp.csproj",
+        "packagesPath": "C:\\Users\\lawza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lawza\\source\\repos\\BankApp1\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Lawe Zangena\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\lawza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -34,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Lawe Zangena\\csharp\\SuperLibrary\\SuperLibrary.csproj": {
-                "projectPath": "C:\\Users\\Lawe Zangena\\csharp\\SuperLibrary\\SuperLibrary.csproj"
+              "C:\\Users\\lawza\\source\\repos\\SuperLibrary\\SuperLibrary.csproj": {
+                "projectPath": "C:\\Users\\lawza\\source\\repos\\SuperLibrary\\SuperLibrary.csproj"
               }
             }
           }
@@ -91,7 +85,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -103,28 +98,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Lawe Zangena\\csharp\\SuperLibrary\\SuperLibrary.csproj": {
+    "C:\\Users\\lawza\\source\\repos\\SuperLibrary\\SuperLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lawe Zangena\\csharp\\SuperLibrary\\SuperLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\lawza\\source\\repos\\SuperLibrary\\SuperLibrary.csproj",
         "projectName": "SuperLibrary",
-        "projectPath": "C:\\Users\\Lawe Zangena\\csharp\\SuperLibrary\\SuperLibrary.csproj",
-        "packagesPath": "C:\\Users\\Lawe Zangena\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lawe Zangena\\csharp\\SuperLibrary\\obj\\",
+        "projectPath": "C:\\Users\\lawza\\source\\repos\\SuperLibrary\\SuperLibrary.csproj",
+        "packagesPath": "C:\\Users\\lawza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lawza\\source\\repos\\SuperLibrary\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Lawe Zangena\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\lawza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -164,7 +153,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -173,7 +163,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

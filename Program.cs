@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using SuperLibrary.Data;
 using SuperLibrary.Models;
 using SuperLibrary.Services;
-using RazorIdentityNewProject.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
