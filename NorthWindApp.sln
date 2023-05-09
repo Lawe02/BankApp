@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWindApp", "NorthWindApp.csproj", "{3E6EC1D7-02F8-47C2-AA6D-68E11BB7569E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperLibrary", "..\SuperLibrary\SuperLibrary.csproj", "{6F880CB0-AA77-4274-B862-7F267868E5BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperLibrary", "SuperLibrary\SuperLibrary.csproj", "{65AE9566-A4FE-4865-863A-032FB247CC59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{3E6EC1D7-02F8-47C2-AA6D-68E11BB7569E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E6EC1D7-02F8-47C2-AA6D-68E11BB7569E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E6EC1D7-02F8-47C2-AA6D-68E11BB7569E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6F880CB0-AA77-4274-B862-7F267868E5BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F880CB0-AA77-4274-B862-7F267868E5BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F880CB0-AA77-4274-B862-7F267868E5BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F880CB0-AA77-4274-B862-7F267868E5BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65AE9566-A4FE-4865-863A-032FB247CC59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65AE9566-A4FE-4865-863A-032FB247CC59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65AE9566-A4FE-4865-863A-032FB247CC59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65AE9566-A4FE-4865-863A-032FB247CC59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
