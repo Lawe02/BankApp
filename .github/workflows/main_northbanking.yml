@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'NorthBanking'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6144BC16C85647819F7E7C3926396474 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1EDF9DB6CF964854979501889CB27087 }}
           package: .
